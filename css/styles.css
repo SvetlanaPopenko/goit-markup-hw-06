@@ -127,9 +127,6 @@ img {
   gap: 50px;
 }
 
-.header-item {
-}
-
 .header-link,
 .header-mail,
 .header-phone {
@@ -568,9 +565,6 @@ img {
 
 .main-items {
   --items: 3;
-}
-
-.main-item {
 }
 
 .main-content {
