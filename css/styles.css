@@ -775,6 +775,32 @@ margin-right: 93px;
   margin-bottom: 4px;
 }
 
+.form-input,
+.form-message {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-top: 11px;
+  padding-right: 12px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  width: 100%;
+  outline: transparent;
+  transition: border-color var(--animation-hover);
+}
+
+.form-message {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.form-input:focus-within,
+.form-input:hover,
+.form-message:focus-within,
+.form-message:hover {
+  border-color: var(--accent-color);
+}
+
 .form-icon {
   position: absolute;
   top: 50%;
@@ -788,10 +814,37 @@ margin-right: 93px;
   fill: var(--accent-color);
 }
 
+.form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.form-checkbox:checked+.register-icon .form-icon-uncheck {
+  opacity: 0;
+  transition: opacity var(--animation-hover);
+}
+
+.form-checkbox:checked+.register-icon .form-icon-check {
+  opacity: 1;
+}
+
+.form-icon-check {
+  opacity: 0;
+  transition: opacity var(--animation-hover);
+}
+
 .form-agreement-text {
   line-height: 1.71;
   user-select: none;
   text-underline-position: under;
+}
+
+..form-agreement-link {
+  cursor: pointer;
+  color: var(--accent-color);
 }
 
 .form-btn {
@@ -814,56 +867,3 @@ margin-right: 93px;
   cursor: pointer;
 }
 
-.form-input,
-.form-message {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-top: 11px;
-  padding-right: 12px;
-  padding-bottom: 11px;
-  padding-left: 42px;
-  width: 100%;
-  outline: transparent;
-  transition: border-color var(--animation-hover);
-  }
-
-  .form-message {
-    resize: none;
-    height: 120px;
-    padding: 12px 16px;
-  }
-
-  .form-input:focus-within,
-  .form-input:hover,
-  .form-message:focus-within,
-  .form-message:hover {
-    border-color: var(--accent-color);
-  }
-
-.form-agreement-link {
-  cursor: pointer;
-  color: var(--accent-color);
-  
-}
-
-.form-agreement {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  margin-bottom: 30px;
-}
-
-.form-checkbox:checked + .register-icon .form-icon-uncheck {
-opacity: 0;
-transition: opacity var(--animation-hover);
-}
-
-.form-checkbox:checked+.register-icon .form-icon-check {
-  opacity: 1;
-}
-
-.form-icon-check {
-  opacity: 0;
-  transition: opacity var(--animation-hover);
-}
