@@ -502,7 +502,7 @@ img {
 }
 
 .right-side {
-margin-right: 93px;
+  margin-right: 93px;
 }
 
 .right-side-header {
@@ -546,12 +546,30 @@ margin-right: 93px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
-
 }
 
 .contact-form-wrap {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.contact-input {
+  width: 358px;
+  padding: 15px 16px;
+  background-color: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: var(--transpered-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
 }
 
 /* Portfolio */
@@ -739,7 +757,7 @@ margin-right: 93px;
 
 .form {
   text-align: center;
-  }
+}
 
 .form-title {
   display: block;
@@ -785,6 +803,7 @@ margin-right: 93px;
   padding-left: 42px;
   width: 100%;
   outline: transparent;
+  cursor: pointer;
   transition: border-color var(--animation-hover);
 }
 
@@ -822,12 +841,12 @@ margin-right: 93px;
   margin-bottom: 30px;
 }
 
-.form-checkbox:checked+.register-icon .form-icon-uncheck {
+.form-checkbox:checked + .register-icon .form-icon-uncheck {
   opacity: 0;
   transition: opacity var(--animation-hover);
 }
 
-.form-checkbox:checked+.register-icon .form-icon-check {
+.form-checkbox:checked + .register-icon .form-icon-check {
   opacity: 1;
 }
 
@@ -842,7 +861,7 @@ margin-right: 93px;
   text-underline-position: under;
 }
 
-..form-agreement-link {
+.form-agreement-link {
   cursor: pointer;
   color: var(--accent-color);
 }
@@ -857,7 +876,7 @@ margin-right: 93px;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
- 
+
   color: var(--main-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -865,5 +884,10 @@ margin-right: 93px;
   border: none;
   padding: 10px 52px;
   cursor: pointer;
+  transition: background-color var(--animation-hover);
 }
 
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--btn-hover);
+}
